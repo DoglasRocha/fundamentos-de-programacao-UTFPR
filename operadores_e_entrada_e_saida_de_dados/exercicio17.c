@@ -1,3 +1,9 @@
+/* Construa um programa que receba o valor de uma temperatura em graus Celsius (C) e calcule a sua temperatura
+correspondente em graus Farenheit (F ):
+pF  ́ 32q ˆ 5
+C “
+9 */
+
 #include <stdio.h>
 
 int main(void)

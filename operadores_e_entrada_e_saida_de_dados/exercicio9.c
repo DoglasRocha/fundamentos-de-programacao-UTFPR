@@ -1,3 +1,5 @@
+// Faça um programa que calcule o perímetro (2ˆbase + 2ˆaltura) de um retângulo.
+
 #include <stdio.h>
 
 int main(void)

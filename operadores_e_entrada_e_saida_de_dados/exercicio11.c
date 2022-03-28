@@ -1,3 +1,10 @@
+/* Faça um programa que leia três valores inteiros e apresente o máximo dos três valores lidos seguido da mensagem “eh
+o maior”. Utilize a fórmula:
+a ` b ` abspa  ́ bq
+maxAB “
+2
+Obs. abs() é uma função da biblioteca stdlib.h! Para isso lembre de incluir stdlib.h de forma similar stdio.h. */
+
 #include <stdio.h>
 #include <stdlib.h>
 

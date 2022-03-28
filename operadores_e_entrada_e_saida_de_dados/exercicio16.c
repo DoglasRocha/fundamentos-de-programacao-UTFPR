@@ -1,3 +1,5 @@
+/* Faça um programa que, dado um número inteiro como entrada, retorne seu último dígito. */
+
 #include <stdio.h>
 
 int main(void)

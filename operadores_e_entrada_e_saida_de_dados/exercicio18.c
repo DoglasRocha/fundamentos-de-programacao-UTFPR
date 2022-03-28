@@ -1,3 +1,9 @@
+/* Construa um programa que calcule o gasto de uma viagem de carro de uma cidade a outra, sabendo:
+• O carro utilizado roda 15 Km com 1 litro de gasolina.
+• O preço da gasolina é de R$2,60.
+• O valor de cada pedágio é de R$8,00.
+Seu programa deve receber a distância e a quantidade de pedágios entre as cidades. */
+
 #include <stdio.h>
 
 int main(void)

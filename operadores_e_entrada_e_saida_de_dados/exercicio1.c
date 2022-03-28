@@ -1,3 +1,7 @@
+//  Complete o programa abaixo de forma a ler do teclado dois valores em ponto flutuante, armazenando-os nas variáveis
+// n1 e n2. Efetue a soma de n1 e n2, atribuindo o resultado na variável aux. Imprima o valor de aux com apenas duas
+// casas decimais - dica: a função printf possui opções de formatação para esta finalidade!
+
 #include <stdio.h>
 
 int main(void)

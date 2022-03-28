@@ -1,3 +1,7 @@
+/* Faça um programa que leia um número inteiro e informe com quais cédulas podemos representá-lo. Suponha que
+estejam disponíveis apenas notas de R$ 50, R$5 e R$1. Exemplo de resposta: R$ 218 = 4 cédulas de 50, 3 cédulas de
+5 e 3 cédulas de 1. */
+
 #include <stdio.h>
 
 int main(void)

@@ -1,3 +1,6 @@
+/* Faça um algoritmo que dado um número de segundos, converta para dias, horas, minutos e segundos. Por exemplo,
+7322 segundos correspondem a 0 dias, 2 horas, 2 minutos e 2 segundos. */
+
 #include <stdio.h>
 
 int main(void)

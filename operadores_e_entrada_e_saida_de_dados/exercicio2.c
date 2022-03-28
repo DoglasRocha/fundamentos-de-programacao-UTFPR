@@ -1,3 +1,8 @@
+// Modifique o programa anterior para imprimir também os valores de n1 e n2 e rode novamente. Atenção!!! Você deve
+// considerar que está correto somente quando não houver nenhum aviso (warning) nem erro (error).
+// O que acontece se você eliminar os comandos de leitura (scanf) do programa e tentar imprimir o conteúdo das variáveis
+// mesmo assim? Compile, rode e veja as mensagens e resultados.
+
 #include <stdio.h>
 
 int main(void)
