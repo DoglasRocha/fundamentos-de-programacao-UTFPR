@@ -1,3 +1,9 @@
+// Depois, altere o programa para imprimir
+// Oi ! Esse eh um programa teste !
+// *
+// ***
+// *****
+
 #include <stdio.h>
 
 int main(void)

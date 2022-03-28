@@ -1,3 +1,7 @@
+//  O trecho de código abaixo possui mais de um erro de sintaxe. Identifique quais são e somente depois implemente no
+// computador o código correto. O programa correto deve ter como mensagem de saída na tela de Logs: 0 Error(s), 0
+// Warning(s).
+
 // #include <studio.h>
 #include <stdio.h>
 

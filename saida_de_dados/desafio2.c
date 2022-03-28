@@ -1,3 +1,5 @@
+// (desafio II) Faça um programa que converta as letras de ’A’ a ’D’ para minúsculo e imprima o resultado na tela.
+
 #include <stdio.h>
 
 int main(void)

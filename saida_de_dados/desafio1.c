@@ -1,3 +1,5 @@
+// (desafio I) Faça um programa que imprima na tela o códico ASCII das letras de ’A’ a ’D’.
+
 #include <stdio.h>
 
 int main(void)
