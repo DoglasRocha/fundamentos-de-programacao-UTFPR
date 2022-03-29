@@ -25,16 +25,15 @@ int main(void)
     if (mes_nasc < 3)
     {
         mes_nasc += 12;
+        ano_nasc -= 1;
     }
 
-    int seculo = ano_nasc / 100, 
-        ano_seculo = ano_nasc % 100, 
-        primeiro_trunc = ((mes_nasc + 1) * 26) / 10,
-        segundo_trunc = (ano_seculo / 4),
-        terceiro_trunc = (seculo / 4);
+    int j = ano_nasc / 100, 
+        k = ano_nasc % 100,
+        q = dia_nasc,
+        m = mes_nasc;
 
-    int dia_da_semana = (dia_nasc + primeiro_trunc + ano_seculo +
-        segundo_trunc + terceiro_trunc + 5 * seculo) % 7;
+    int dia_da_semana = (q + ((m + 1) * 26) / 10 + k + k / 4 + j / 4 + 5 * j) % 7;
 
     if (dia_da_semana == 0)
     {
