@@ -17,26 +17,32 @@ int main(void)
 
     int n1 = rand() % 100 + 1, n2 = rand() % 100 + 1, operacao = rand() % 6, 
         resultado;
+    char operador;
 
     if (operacao == 0)
     {
         resultado = n1 + n2;
+        operador = '+';
     }
     else if (operacao == 1)
     {
         resultado = n1 - n2;
+        operador = '-';
     }
     else if (operacao == 2)
     {
         resultado = n1 * n2;
+        operador = '*';
     }
     else if (operacao == 3)
     {
         resultado = n1 / n2;
+        operador = '/';
     }
     else
     {
         resultado = n1 % n2;
+        operador = '%';
     }
 
     int resultado_fornecido;
@@ -56,9 +62,10 @@ int main(void)
     }
     else
     {
-        printf("Você errou! O resultado da operação era: %d\n", resultado);
+        printf("Você errou!\n");
     }
 
+    printf("A operação era: %d %c %d = %d\n", n1, operador, n2, resultado);
     printf("Tempo decorrido: %ds\n\n", tempo_decorrido);
     return 0;
 }

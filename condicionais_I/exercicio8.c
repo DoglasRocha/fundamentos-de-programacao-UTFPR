@@ -1,4 +1,4 @@
-/* adas a data atual e a data de nascimento de uma pessoa,
+/* Dadas a data atual e a data de nascimento de uma pessoa,
 • (a) calcular a sua idade.
 Complete o programa do item anterior, informando também
 • (b) o dia da semana em que a pessoa nasceu
@@ -16,6 +16,7 @@ int main(void)
     printf("Digite a data de hoje (formato ddmm/aaaa): ");
     scanf(" %d/%d/%d", &dia_hoje, &mes_hoje, &ano_hoje);
 
+    // calculando a diferença de dias, para evitar bugs (por exemplo, quando o dia do aniversario é maior que o dia de hoje)
     long int dias_ate_hoje = dia_hoje + mes_hoje * 30 + ano_hoje * 365,
              dias_ate_nasc = dia_nasc + mes_nasc * 30 + ano_nasc * 365;
 
