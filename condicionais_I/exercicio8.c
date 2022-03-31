@@ -10,15 +10,24 @@ int main(void)
 {
     int dia_hoje, mes_hoje, ano_hoje, dia_nasc, mes_nasc, ano_nasc;
 
-    printf("Digite sua data de nascimento (formato dd mm aaaa): ");
-    scanf("%d %d %d", &dia_nasc, &mes_nasc, &ano_nasc);
+    printf("Digite sua data de nascimento (formato dd/mm/aaaa): ");
+    scanf("%d/%d/%d", &dia_nasc, &mes_nasc, &ano_nasc);
 
-    printf("Digite a data de hoje (formato dd mm aaaa): ");
-    scanf(" %d %d %d", &dia_hoje, &mes_hoje, &ano_hoje);
+    printf("Digite a data de hoje (formato ddmm/aaaa): ");
+    scanf(" %d/%d/%d", &dia_hoje, &mes_hoje, &ano_hoje);
 
-    int anos = ano_hoje - ano_nasc;
-    int meses = mes_hoje - mes_nasc;
-    int dias = dia_hoje - dia_nasc;
+    long int dias_ate_hoje = dia_hoje + mes_hoje * 30 + ano_hoje * 365,
+             dias_ate_nasc = dia_nasc + mes_nasc * 30 + ano_nasc * 365;
+
+    int diff_dias = dias_ate_hoje - dias_ate_nasc;
+
+    int anos = diff_dias / 365;
+    diff_dias %= 365;
+
+    int meses = diff_dias / 30;
+    diff_dias %= 30;
+
+    int dias = diff_dias;
 
     printf("Você tem %d anos, %d meses e %d dias\n", anos, meses, dias);
 
