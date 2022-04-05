@@ -32,6 +32,7 @@ int main(void)
     scanf("%d", &consumo);
 
     auxiliar = consumo;
+	// calcula o consumo na faixa > 100
     if (consumo >= 101)
     {
         intervalo = consumo - 100;
@@ -39,6 +40,7 @@ int main(void)
 
         auxiliar = 100;
     }
+	// calcula o consumo na faixa 30 < x <= 100
     if (consumo >= 31)
     {
         intervalo = auxiliar - 30;
@@ -46,6 +48,7 @@ int main(void)
 
         auxiliar = 30;
     }
+	// calcula o consumo na faixa 10 < x <= 30
     if (consumo >= 11)
     {
         intervalo = auxiliar - 10;
@@ -54,6 +57,7 @@ int main(void)
         auxiliar = 10;
     }
 
+	// preco base, adicionado em qualquer faixa de consumo
     preco += 7;
 
     printf("O preco da sua conta de agua eh de: R$ %d\n\n", preco);

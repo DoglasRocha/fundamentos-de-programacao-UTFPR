@@ -49,7 +49,7 @@ int main(void)
 
     time_t tempo_inicial = time(NULL), tempo_final;
 
-    printf("Digite o resultado da operação aleatoria: ");
+    printf("Digite o resultado da operação %d %c %d: ", n1, operador, n2);
     scanf("%d", &resultado_fornecido);
 
     tempo_final = time(NULL);
@@ -65,7 +65,7 @@ int main(void)
         printf("Você errou!\n");
     }
 
-    printf("A operação era: %d %c %d = %d\n", n1, operador, n2, resultado);
+    printf("O resultado era: %d %c %d = %d\n", n1, operador, n2, resultado);
     printf("Tempo decorrido: %ds\n\n", tempo_decorrido);
     return 0;
 }

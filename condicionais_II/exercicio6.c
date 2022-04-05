@@ -16,6 +16,11 @@ f caso contrário. */
 
 #include <stdio.h>
 
+#define LIMITE_MIN_X 0
+#define LIMITE_MIN_Y 0
+#define LIMITE_MAX_X 432
+#define LIMITE_MAX_Y 468
+
 int main(void)
 {
     int x_contato, y_contato;
@@ -24,12 +29,13 @@ int main(void)
     printf("Digite as coordenadas do ponto de contato separadas por virgula (x,y): ");
     scanf("%d,%d", &x_contato, &y_contato);
 
-    if (x_contato > x_limite && y_contato > y_limite)
+	if ((x_contato < LIMITE_MIN_X || x_contato > LIMITE_MAX_X)
+		|| (y_contato < LIMITE_MIN_Y || y_contato > LIMITE_MAX_Y))
     {
-        printf("f");
+        printf("Bola fora da quadra");
     }
     else
-        printf("d");
+        printf("Bola dentro da quadra");
 
     printf("\n\n");
 
