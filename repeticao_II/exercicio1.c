@@ -7,6 +7,7 @@ int main(void)
 {
     float numero_fornecido = 0, maior_numero = 0;
 
+
     while (numero_fornecido >= 0)
     {
         printf("Por favor digite um numero positivo: ");

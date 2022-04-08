@@ -9,3 +9,30 @@ Exemplo de Entrada Exemplo de Saída
 4.6
 12
 -1000 */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int qtd_positivos = 0;
+    float somatorio_positivos = 0, numero_fornecido = 0;
+
+    while (numero_fornecido != -1000)
+    {
+        printf("Digite um valor inteiro: ");
+        scanf("%f", &numero_fornecido);
+
+        if (numero_fornecido > 0)
+        {
+            qtd_positivos++;
+            somatorio_positivos += numero_fornecido;
+        }
+    }
+
+    float media = (float)somatorio_positivos / qtd_positivos;
+
+    printf("%d valores positivos fornecidos\n", qtd_positivos);
+    printf("Media: %.1f\n\n", media);
+
+    return 0;
+}
