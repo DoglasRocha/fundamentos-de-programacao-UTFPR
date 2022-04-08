@@ -29,7 +29,21 @@ int main(void)
         }
     }
 
-    printf("Voce acertou!\n\n");
+    printf("Voce acertou! Seu numero de tentativas foi de: %d ", n_tentativas);
+
+    if (n_tentativas <= 3)
+        printf("\\o/");
+
+    else if (n_tentativas <= 6)
+        printf(":-D");
+
+    else if (n_tentativas <= 10)
+        printf(":-)");
+
+    else
+        printf(":-\\");
+
+    printf("\n\n");
 
     return 0;
 }
