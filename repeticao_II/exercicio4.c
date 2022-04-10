@@ -15,15 +15,20 @@ int main(void)
 
     else
     {
+		// define uma constante, que eh o numero de iteracoes maximo
+		// o maior e o menor numero fornecido
         int const_max = (n1 + n2 + abs(n1 - n2)) / 2,
             max = const_max, 
             min = (n1 + n2 - abs(n1 - n2)) / 2;
 
-        printf("max %d min %d\n", max, min);
+		// itera sobre a constante do maior numero, a fim de encontrar divisores
         for (int divisor = 2; divisor <= const_max && (max > 1 || min > 1); divisor++)
         {
+			// caso algum dos numeros seja divisivel, seu divisor entrará na conta do mmc
+			// e irá dividir o(s) numero(s) divisivel(eis)
             while (max % divisor == 0 || min % divisor == 0)
             {
+				printf("%d, %d | %d\n", max, min, divisor);
                 if (max % divisor == 0)
                     max /= divisor;
 
@@ -34,7 +39,8 @@ int main(void)
             }
         }
     }
-
+	
+	printf("1, 1 | 1\n");
     printf("MMC de %d e %d é %d\n\n", n1, n2, mmc);
 
     return 0;
