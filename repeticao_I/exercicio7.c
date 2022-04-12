@@ -14,19 +14,25 @@ int main(void)
 
     printf("Digite quantos numeros da serie de Fibonnaci você quer saber: ");
     scanf("%d", &passos);
-    passos -= 2;
 
-    printf("%d %d ", n1, n2);
-
-    for (int i = 0; i < passos; i++)
+    if (passos < 3)
     {
-        soma = n1 + n2;
-        printf("%d ", soma);
+        passos -= 2;
 
-        n1 = n2, n2 = soma;
+        printf("%d %d ", n1, n2);
+
+        for (int i = 0; i < passos; i++)
+        {
+            soma = n1 + n2;
+            printf("%d ", soma);
+
+            n1 = n2, n2 = soma;
+        }
+
     }
+    else
+        printf("Uma serie de Fibonacci com menos de tres numeros eh impossivel");
 
     printf("\n\n");
-
     return 0;
 }

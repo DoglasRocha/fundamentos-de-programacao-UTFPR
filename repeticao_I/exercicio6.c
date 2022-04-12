@@ -11,7 +11,7 @@ int main(void)
     scanf("%d", &numero);
     fatorial = numero;
 
-    for (int n = fatorial - 1; n != 0; n--)
+    for (int n = fatorial - 1; n > 1; n--)
     {
         fatorial *= n;
     }
