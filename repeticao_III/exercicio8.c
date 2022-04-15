@@ -4,39 +4,29 @@
 
 int main(void)
 {
-    int n, anterior, presente, eh_crescente = 1, eh_decrescente = 1;
+    char anterior, presente;
+    int sao_iguais = 1;
 
-    printf("Digite a quantidade de numeros da sua sequencia: ");
-    scanf("%d", &n);
-
-    printf("Digite sua sequencia: ");
-    for (int i = 0; i < n; i++)
+    printf("Digite um numero: ");
+                                    // verificando se caracter digitado foi enter
+                                    // utilizei um loop "for" por nessa estrutura ser mais facil fazer contador
+    for (int i = 0; scanf("%c", &presente) && (int)presente != 10; i++)
     {
-        scanf("%d", &presente);
-        
         if (i == 0)
-        {
             anterior = presente;
-            continue;
+
+        if (anterior != presente)
+        {
+            sao_iguais = 0;
+            break;
         }
-
-        if (anterior > presente)
-            eh_crescente = 0;
-        
-        else if (anterior < presente)
-            eh_decrescente = 0;
-
-        anterior = presente;
     }
 
-    if (!eh_crescente && !eh_decrescente)
-        printf("eh desordenada\n");
-
-    else if(eh_crescente)
-        printf("eh crescente\n");
+    if (sao_iguais)
+        printf("Os digitos do numero sao iguais\n");
 
     else
-        printf("eh decrescente\n");
+        printf("Os digitos do numero nao sao iguais\n");
 
     return 0;
 }
