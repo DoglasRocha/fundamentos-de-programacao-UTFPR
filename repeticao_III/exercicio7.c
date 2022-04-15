@@ -11,6 +11,12 @@ int main(void)
     printf("Forneca um numero natural: ");
     scanf("%d", &n);
 
+    if (n < 0)
+    {
+        printf("Entrada invalida\n");
+        return 0;
+    }
+
     for (i = 1; i < n / 3; i++)
     {
         if (i * (i + 1) * (i + 2) == n)
