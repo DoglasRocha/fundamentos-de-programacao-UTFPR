@@ -1,16 +1,11 @@
-/* Construa um programa que leia um número n e, em seguida, leia uma sequência de n números inteiros e verifique se
-ela está ordenada de forma crescente.
-Exemplo de Entrada Exemplo de Saída
-5 sim
-1 2 5 6 7
-4 não
-1 20 5 7 */
+/* Modifique o programa anterior para verificar se a sequência está (a) ordenada de forma crescente, (b) ordenada de
+forma decrescente ou (c) desordenada. */
 
 #include <stdio.h>
 
 int main(void)
 {
-    int n, anterior, presente, eh_crescente = 1, pode_ter_iguais_mas_eh_crescente = 0;
+    int n, anterior, presente, eh_crescente = 1, eh_decrescente = 1;
 
     printf("Digite a quantidade de numeros da sua sequencia: ");
     scanf("%d", &n);
@@ -27,21 +22,22 @@ int main(void)
         }
 
         if (anterior > presente)
-        {
             eh_crescente = 0;
-            break;
-        }
+        
         else if (anterior < presente)
-            pode_ter_iguais_mas_eh_crescente = 1;
+            eh_decrescente = 0;
 
         anterior = presente;
     }
 
-    if (eh_crescente && pode_ter_iguais_mas_eh_crescente)
+    if (!eh_crescente && !eh_decrescente)
+        printf("eh desordenada\n");
+
+    else if(eh_crescente)
         printf("eh crescente\n");
 
     else
-        printf("nao eh crescente\n");
+        printf("eh decrescente\n");
 
     return 0;
 }
