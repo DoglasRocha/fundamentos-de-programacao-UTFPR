@@ -16,43 +16,46 @@ int main(void)
         return 1;
     }
 
-    printf("    ");
+    printf("     ");
     for (int i = 1; i <= n; i ++)
     {
-        printf("%d", i);
+        /* printf("%d", i);
         
         if (i < 10)
             printf("   ");
         
         else
-            printf("  ");
+            printf("  "); */ // ERRADO
+
+        printf("%5d", i);
     }
 
     printf("\n");
 
     for (int i = 1; i <= n; i++)
     {
-        printf("%d", i);
+        printf("%5d", i);
 
-        if (i < 10)
+        /* if (i < 10)
             printf("   ");
 
         else
-            printf("  ");
+            printf("  "); */ // ERRADO
+
 
         for (int j = 1; j <= i; j++)
         {
             mult = i * j;
-            printf("%d", mult);
+            printf("%5d", mult);
 
-            if (mult < 10)
+            /* if (mult < 10)
                 printf("   ");
 
             else if (mult < 100)
                 printf("  ");
 
             else
-                printf(" ");
+                printf(" "); */ // ERRADO
         }
 
         printf("\n");

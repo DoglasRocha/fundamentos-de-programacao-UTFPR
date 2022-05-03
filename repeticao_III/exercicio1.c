@@ -16,16 +16,18 @@ int main(void)
 		{
 			resultado = i * j;
 			
-			if (resultado / 10 >= 10)
+			/* if (resultado / 10 >= 10)
 				qtd_espacos_retirar = 2;
 			else if (resultado / 10 >= 1)
 				qtd_espacos_retirar = 1;
 			else
 				qtd_espacos_retirar = 0;
 				
-			printf("%d", i * j);
+			printf("%d", i * j); // deveria ter usado formatacao de string, %5d
 			for (int s = 0; s < qtd_espacos - qtd_espacos_retirar; s++)
-				printf(" ");
+				printf(" "); */ // Errado
+			
+			printf("%5d", i * j);
 		}
 		
 		printf("\n");

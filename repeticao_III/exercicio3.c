@@ -13,10 +13,12 @@ int main(void)
 	
 	for (int i = -n; i <= n; i++)
 	{
-		if (i < 0)
+		/* if (i < 0)
 			printf("%d  ", i);
 		else
-			printf(" %d  ", i);
+			printf(" %d  ", i); */ // ERRADO
+
+		printf("%5d ", i);
 			
 		resultado = i * i + i + 1;
 		

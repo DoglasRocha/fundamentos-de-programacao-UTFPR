@@ -16,7 +16,7 @@ int main(void)
 
         if (resultado * resultado == n_analisado)
         {
-            printf("%d: ", n_analisado,  resultado, resultado);
+            printf("%d: ", n_analisado, resultado, resultado);
             printf("%d + %d = %d -> ", centenas, dezena, resultado);
             printf("%d * %d = %d\n\n", resultado, resultado, n_analisado);
         }
