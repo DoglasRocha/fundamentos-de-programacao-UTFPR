@@ -14,7 +14,7 @@ Protótipo: void imprimeVencedor(int resto);
 #include <stdio.h>
 
 int retorna_resto(int alexandre, int maria, int rafael);
-int imprime_vencedor(int resto);
+void imprime_vencedor(int resto);
 
 int main(void)
 {
@@ -34,7 +34,7 @@ int retorna_resto(int alexandre, int maria, int rafael)
     return (alexandre + maria + rafael) % 3;
 }
 
-int imprime_vencedor(int resto)
+void imprime_vencedor(int resto)
 {
     printf("O vencedor foi: ");
 
