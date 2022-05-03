@@ -7,7 +7,7 @@ a b Retorno
 
 #include <stdio.h>
 
-int verifica_igualdade_trecho(int n1, int n2);
+int trecho_eh_igual(int n1, int n2);
 
 int main(void)
 {
@@ -16,11 +16,11 @@ int main(void)
     printf("Digite dois numeros: ");
     scanf("%d %d", &n1, &n2);
 
-    printf("%d\n", verifica_igualdade_trecho(n1, n2));
+    printf("%d\n", trecho_eh_igual(n1, n2));
     return 0;
 }
 
-int verifica_igualdade_trecho(int n1, int n2)
+int trecho_eh_igual(int n1, int n2)
 {
     while (n2 > 0 && n1 % 10 == n2 % 10)
         n1 /= 10, n2 /= 10;
