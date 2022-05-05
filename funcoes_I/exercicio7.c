@@ -49,6 +49,8 @@ int bin2dec(int bin)
 {
     int resultado = 0;
 
+    // le cada numero do binario e o multiplica pela potencia de base 2
+    // correspondente
     for (int i = 0; bin > 0; bin /= 10, i++)
         resultado += (bin % 10 * pow(2, i));
 
@@ -60,11 +62,17 @@ int dec2bin(int dec)
 {
     int resultado = 0, aux = dec, n_repeticoes;
 
+    // primeiro, acha a potencia de base dois menor e mais proxima do numero
+    // desejado
     for (n_repeticoes = 0; aux > 0; n_repeticoes++, aux /=2);
 
+    // depois, subtrai as potencias de base 2 do numero fornecido, se elas forem menores
+    // que o n fornecido e depois constroi o binario, adicionando a potencia de base 10 ao
+    // resultado
     for (int n = n_repeticoes; dec > 0; n--)
         if (dec >= pow(2, n))
-            resultado += pow(10, n), dec -= pow(2, n);
+            resultado += pow(10, n), 
+            dec -= pow(2, n);
 
     return resultado;
 }

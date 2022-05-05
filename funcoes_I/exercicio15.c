@@ -55,13 +55,19 @@ int sequencia_eh_toda_impar(int k)
         printf("Digite um numero da sequencia: ");
         scanf("%d", &atual);
 
+        // verifica se o numero anterior tem paridade diferente do numero atual,
+        // se tiver, a sequencia nao tem paridade 
         if (i != 0 && atual % 2 != anterior % 2)
-            eh_impar = -1, travado = 1;
+            eh_impar = -1, 
+            travado = 1;
 
         anterior = atual;
 
+        // a trava simplesmente impede de ficar atualizando a variavel em
+        // toda iteracao
         if (!travado)
-            eh_impar = atual % 2, travado = 1;
+            eh_impar = atual % 2, 
+            travado = 1;
     }
 
     return eh_impar;
@@ -75,6 +81,8 @@ int eh_piramidal_alternante(int n)
     {
         atual_eh_impar = sequencia_eh_toda_impar(i);
 
+        // caso a seq analizada nao tenha paridade ou a paridade da seq anterior seja
+        // igual a paridade atual, nao ha alternancia
         if (i != 1 
             && !travado
             && (atual_eh_impar == -1 || atual_eh_impar == anterior_eh_impar))

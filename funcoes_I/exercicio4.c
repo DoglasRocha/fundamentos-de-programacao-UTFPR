@@ -36,7 +36,9 @@ int main(void)
 
 int calcula_digito_verificador(int num)
 {
-    int centena = num / 100, dezena = (num / 10) % 10, unidade = num % 10, 
+    int centena = num / 100, 
+        dezena = (num / 10) % 10, 
+        unidade = num % 10, 
         digito_verificador = ((centena * 1 + dezena * 2 + unidade * 3) % 11) % 10;
 
     return digito_verificador;

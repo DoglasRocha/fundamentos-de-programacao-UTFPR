@@ -33,6 +33,9 @@ int main(void)
 
 int retorna_MDC(int num1, int num2)
 {
+    // utilizando recursao, acha o MDC. subtrai do maior numero o menor numero,
+    // ate que os dois sejam iguais
+    
     if (num1 == num2)
         return num1;
 

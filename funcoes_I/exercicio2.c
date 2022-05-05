@@ -22,6 +22,8 @@ int main(void)
 
 int arredonda(float n)
 {
+    // se o resto absoluto da subtração de n com n truncado for >= 0.5
+    // o numero retornado será n truncado + 1, senao, n truncado sera retornado
     int n_truncado = n;
 
     if (n < 0 && n - n_truncado <= -0.5)
