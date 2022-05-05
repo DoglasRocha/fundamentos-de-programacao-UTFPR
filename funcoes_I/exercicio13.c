@@ -51,13 +51,9 @@ int trecho_eh_igual(int n1, int n2)
 int tem_trecho(int n1, int n2)
 {
     if (n1 > n2)
-    {
         return faz_verificacao_trecho(n1, n2, 2);
-    }
-    else
-    {
-        return faz_verificacao_trecho(n2, n1, 1);
-    }
+    
+    return faz_verificacao_trecho(n2, n1, 1);
 }
 
 int faz_verificacao_trecho(int maior, int menor, int valor_retorno)
