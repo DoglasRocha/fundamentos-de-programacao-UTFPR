@@ -35,8 +35,8 @@ int conta_digitos(int n, int d)
 {
     int count = 0;
 
-    for (n; n > 0; n /= 10)
-        if (n % 10 == d)
+    for (int i = n; i > 0; i /= 10)
+        if (i % 10 == d)
             count++;
 
     return count;
@@ -44,12 +44,12 @@ int conta_digitos(int n, int d)
 
 int eh_permutacao(int n1, int n2)
 {
-    int permutacao = 1, aux = n1;
+    int permutacao = 1;
 
-    for (aux; aux > 0; aux /= 10)
+    for (int aux = n1; aux > 0; aux /= 10)
         // se a qtd de digitos em um numero for diferente da qtd do outro
         // numero, eles nao sao permutacoes um do outro
-        if (conta_digitos(n1, n1 % 10) != conta_digitos(n2, n1 % 10))
+        if (conta_digitos(n1, aux % 10) != conta_digitos(n2, aux % 10))
         {
             permutacao = 0;
             break;
