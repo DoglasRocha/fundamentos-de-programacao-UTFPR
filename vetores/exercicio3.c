@@ -15,6 +15,7 @@ void soma_e_imprime(int vetor1[], int vetor2[], int tamanho);
 int main(void)
 {
     int vetor1[TAMANHO], vetor2[TAMANHO];
+    srand(time(NULL));
 
     preenche_vetor(vetor1, TAMANHO);
     preenche_vetor(vetor2, TAMANHO);
@@ -32,8 +33,6 @@ int main(void)
 
 void preenche_vetor(int vetor[], int tamanho)
 {
-    srand(time(NULL));
-
     for (int i = 0; i < tamanho; i++)
         vetor[i] = rand() % 10;
 }

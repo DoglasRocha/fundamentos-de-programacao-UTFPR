@@ -31,8 +31,6 @@ int main(void)
 
 void preenche_vetor(int vetor[], int tamanho, int lim_min, int lim_max)
 {
-    srand(time(NULL));
-
     for (int i = 0; i < tamanho; i++)
         // lim_max - lim_min + 1 / +1 serve para incluir o limite superior nos resultados
         vetor[i] = rand() % (lim_max - lim_min + 1) + lim_min;

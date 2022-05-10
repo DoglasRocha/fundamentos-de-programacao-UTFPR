@@ -17,6 +17,7 @@ void remove_e_puxa(int vetor[], int posicao, int tamanho);
 
 int main(void)
 {
+    srand(time(NULL));
     int vetor[TAMANHO], posicao_a_remover;
 
     preenche_vetor(vetor, TAMANHO);
@@ -47,8 +48,6 @@ void imprime_vetor(int vetor[], int tamanho)
 
 void preenche_vetor(int vetor[], int tamanho)
 {
-    srand(time(NULL));
-
     for (int i = 0; i < tamanho; i++)
         vetor[i] = rand() % 20;
 }

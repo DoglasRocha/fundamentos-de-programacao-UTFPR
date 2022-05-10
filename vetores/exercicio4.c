@@ -14,6 +14,7 @@ void imprime_vetor(int vetor[], int tamanho);
 int main(void)
 {
     int limite, vetor[TAMANHO];
+    srand(time(NULL));
 
     printf("Digite um numero limite para preenchimento do vetor: ");
     scanf("%d", &limite);
@@ -26,8 +27,6 @@ int main(void)
 
 void preenche_vetor(int vetor[], int tamanho, int limite)
 {
-    srand(time(NULL));
-
     for (int i = 0; i < tamanho; i++)
         vetor[i] = rand() % limite;
 }

@@ -13,6 +13,7 @@ void imprime_vetor(int vetor[], int tamanho);
 int main(void)
 {
     int min, max, vetor[TAMANHO];
+    srand(time(NULL));
 
     printf("Digite um numero limite maximo e minimo, separados por espacos, para preenchimento do vetor: ");
     scanf("%d %d", &min, &max);
@@ -25,8 +26,6 @@ int main(void)
 
 void preenche_vetor(int vetor[], int tamanho, int lim_min, int lim_max)
 {
-    srand(time(NULL));
-
     for (int i = 0; i < tamanho; i++)
         // lim_max - lim_min + 1 / +1 serve para incluir o limite superior nos resultados
         vetor[i] = rand() % (lim_max - lim_min + 1) + lim_min;
