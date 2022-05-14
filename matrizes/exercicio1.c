@@ -46,6 +46,7 @@ void imprime_matriz(int matriz[MAX][MAX], int linhas, int colunas)
     }
 
 }
+
 void imprime_transposta(int matriz[MAX][MAX], int linhas, int colunas)
 {
     for (int i = 0; i < linhas; i++)
