@@ -8,23 +8,26 @@
 
 void preenche_vetor(int vetor[], int tamanho, int lim_min, int lim_max);
 void imprime_vetor(int vetor[], int tamanho);
-int soma_pares_posicao(int vetor[], int tamanho);
-int soma_elementos_pares(int vetor[], int tamanho);
+float media_pares_posicao(int vetor[], int tamanho);
+float media_elementos_pares(int vetor[], int tamanho);
 
 int main(void)
 {
-    int vetor[TAMANHO], soma_posicao, soma_elementos;
+    int vetor[TAMANHO];
+    float media_posicao, media_elementos;
+
+    srand(time(NULL));
 
     preenche_vetor(vetor, TAMANHO, 1, 10);
 
     printf("Vetor trabalhado: ");
     imprime_vetor(vetor, TAMANHO);
 
-    soma_posicao = soma_pares_posicao(vetor, TAMANHO);
-    printf("Soma elementos com posicao par: %d\n", soma_posicao);
+    media_posicao = media_pares_posicao(vetor, TAMANHO);
+    printf("Media elementos com posicao par: %f\n", media_posicao);
         
-    soma_elementos = soma_elementos_pares(vetor, TAMANHO);
-    printf("Soma elementos pares: %d\n", soma_elementos);
+    media_elementos = media_elementos_pares(vetor, TAMANHO);
+    printf("Media elementos pares: %f\n", media_elementos);
 
     return 0;
 }
@@ -46,24 +49,24 @@ void imprime_vetor(int vetor[], int tamanho)
     printf("]\n");
 }
 
-int soma_pares_posicao(int vetor[], int tamanho)
+float media_pares_posicao(int vetor[], int tamanho)
 {
-    int soma = 0;
+    float soma = 0, qtd = 0;
 
     for (int i = 0; i < tamanho; i++)
         if (i % 2 == 0)    
-            soma += vetor[i];
+            soma += vetor[i], qtd++;
 
-    return soma;
+    return soma / qtd;
 }
 
-int soma_elementos_pares(int vetor[], int tamanho)
+float media_elementos_pares(int vetor[], int tamanho)
 {
-    int soma = 0;
+    float soma = 0, qtd = 0;
 
     for (int i = 0; i < tamanho; i++)
         if (vetor[i] % 2 == 0)    
-            soma += vetor[i];
+            soma += vetor[i], qtd++;
 
-    return soma;
+    return soma / qtd;
 }
