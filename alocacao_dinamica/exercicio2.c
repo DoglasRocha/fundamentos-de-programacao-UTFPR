@@ -19,9 +19,6 @@ multiplicado pelos elementos do bloco v2. Lembre-se de que esse é apenas um exe
 #include <time.h>
 #include "funcoes_basicas.h"
 
-// int *cria_vetor(int tam, int lim_inf, int lim_sup);
-// void preenche_vetor(int vetor[], int tam, int lim_inf, int lim_sup);
-// int imprime_vetor(int vetor[], int tam);
 int *multiplica_vetores(int vetor1[], int vetor2[], int tam1, int tam2, int *tam3);
 
 int main(void)
@@ -34,15 +31,23 @@ int main(void)
 
     printf("Digite o tamanho do primeiro vetor: ");
     scanf("%d", &tam1);
-    v1 = cria_vetor(tam1, lim_inf, lim_sup);
+    v1 = cria_vetor(tam1);
     if (v1 == NULL)
+    {
+        printf("Erro na alocação!\n");
         return 1;
+    }
+    preenche_vetor(v1, tam1, lim_inf, lim_sup);
 
     printf("Digite o tamanho do segundo vetor: ");
     scanf("%d", &tam2);
-    v2 = cria_vetor(tam2, lim_inf, lim_sup);
+    v2 = cria_vetor(tam2);
     if (v2 == NULL)
+    {
+        printf("Erro na alocação!\n");
         return 1;
+    }
+    preenche_vetor(v2, tam2, lim_inf, lim_sup);
 
     printf("Vetor 1:\n");
     imprime_vetor(v1, tam1);
@@ -64,35 +69,6 @@ int main(void)
     
     return 0;
 }  
-
-// int *cria_vetor(int tam, int lim_inf, int lim_sup)
-// {
-//     int *v;
-
-//     v = (int *) malloc(tam * sizeof(int));
-
-//     if (v == NULL)
-//         printf("Erro na alocacao!\n");
-
-//     else
-//         preenche_vetor(v, tam, lim_inf, lim_sup);
-
-//     return v;
-// }
-
-// void preenche_vetor(int vetor[], int tam, int lim_inf, int lim_sup)
-// {
-//     for (int i = 0; i < tam; i++)
-//         vetor[i] = lim_inf + rand() % (lim_sup - lim_inf) + 1;
-// }
-
-// int imprime_vetor(int vetor[], int tam)
-// {
-//     for (int i = 0; i < tam; i++)
-//         printf("%d ", vetor[i]);
-
-//     printf("\n");
-// }
 
 int *multiplica_vetores(int vetor1[], int vetor2[], int tam1, int tam2, int *tam3)
 {
