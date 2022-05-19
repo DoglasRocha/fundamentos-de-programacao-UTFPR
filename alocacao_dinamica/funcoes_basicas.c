@@ -25,3 +25,27 @@ int imprime_vetor(int vetor[], int tam)
 
     printf("\n");
 }
+
+int **cria_matriz(int lin, int col)
+{
+    int **m;
+
+    m = (int **) malloc(lin * sizeof(int *));
+
+    for (int i = 0; i < lin; i++)
+        m[i] = cria_vetor(col);
+
+    return m;
+}
+
+void imprime_matriz(int **matriz, int lin, int col)
+{
+    for (int i = 0; i < lin; i++)
+        imprime_vetor(matriz[i], col);
+}
+
+void preenche_matriz(int **matriz, int lin, int col, int lim_inf, int lim_sup)
+{
+    for (int i = 0; i < lin; i++)
+        preenche_vetor(matriz[i], col, lim_inf, lim_sup);
+}

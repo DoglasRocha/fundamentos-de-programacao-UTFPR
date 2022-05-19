@@ -26,8 +26,7 @@ int main(void)
     int *v1, *v2, *v3, tam1, tam2, tam3, lim_inf, lim_sup;
     srand(time(NULL));
 
-    printf("Digite o limite inferior e o superior para preenchimento dos vetores, separados por espacos: ");
-    scanf("%d %d", &lim_inf, &lim_sup);
+    lim_inf = 0, lim_sup = 10;
 
     printf("Digite o tamanho do primeiro vetor: ");
     scanf("%d", &tam1);
