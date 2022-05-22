@@ -7,5 +7,6 @@ int imprime_vetor(int vetor[], int tam);
 int **cria_matriz(int lin, int col);
 void imprime_matriz(int **matriz, int lin, int col);
 void preenche_matriz(int **matriz, int lin, int col, int lim_inf, int lim_sup);
+void libera_matriz(int **matriz, int lin);
 
 #endif

@@ -49,3 +49,11 @@ void preenche_matriz(int **matriz, int lin, int col, int lim_inf, int lim_sup)
     for (int i = 0; i < lin; i++)
         preenche_vetor(matriz[i], col, lim_inf, lim_sup);
 }
+
+void libera_matriz(int **matriz, int lin)
+{
+    for (int i = 0; i < lin; i++)
+        free(matriz[i]);
+
+    free(matriz);
+}

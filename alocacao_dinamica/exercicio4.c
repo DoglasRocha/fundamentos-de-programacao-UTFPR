@@ -67,6 +67,9 @@ int main(void)
     custo = custo_cidades(itinerario, tam_itinerario, m_custo);
     printf("O custo do trajeto entre as cidades será de: R$%d\n", custo);
 
+    free(itinerario);
+    libera_matriz(m_custo, dim_m_custo);
+
     return 0;
 }
 
