@@ -24,7 +24,8 @@ int main(void)
 
 void conta_vogais(String texto, int tamanho)
 {
-    char vogais[] = {'a', 'e', 'i', 'o', 'u'};
+    char vogais_min[] = {'a', 'e', 'i', 'o', 'u'},
+    vogais_mai[] = {'A', 'E', 'I', 'O', 'U'};
     int count;
 
     printf("Contagem de vogais:\n");
@@ -33,10 +34,11 @@ void conta_vogais(String texto, int tamanho)
     {
         count = 0;
 
-        printf("%c : ", vogais[l]);
+        printf("%c : ", vogais_min[l]);
 
         for (int i = 0; i < tamanho; i++)
-            if (vogais[l] == texto[i])
+            if (vogais_min[l] == texto[i]
+                || vogais_mai[l] == texto[i])
             {
                 printf("*");
                 count++;
