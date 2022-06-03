@@ -14,7 +14,7 @@ String le_string(int *tam_str_ptr, String mensagem)
     for (tam = 0; c != '\n'; tam++)
     {
         texto[tam] = c;
-        texto = (String) realloc(texto, (tam + 1) * sizeof(char));
+        texto = (String) realloc(texto, (tam + 2) * sizeof(char));
 
         scanf("%c", &c);
     }
