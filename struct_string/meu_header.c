@@ -5,7 +5,7 @@
 String le_string(int *tam_str_ptr, String mensagem)
 {
     int tam;
-    String texto = (String) malloc(sizeof(char));
+    String texto = (String) malloc(2 * sizeof(char));
     char c;
 
     printf("%s ", mensagem);
@@ -14,7 +14,7 @@ String le_string(int *tam_str_ptr, String mensagem)
     for (tam = 0; c != '\n'; tam++)
     {
         texto[tam] = c;
-        texto = (String) realloc(texto, (tam + 2) * sizeof(char));
+        texto = (String) realloc(texto, (tam + 3) * sizeof(char));
 
         scanf("%c", &c);
     }
@@ -36,7 +36,7 @@ String *separa_por_espacos(String frase, int tamanho, int *qtd_palavas)
         if (frase[i] == ' ')
         {
             // aloca espaco para palavra
-            palavras[*qtd_palavas] = (String) malloc((i - pos_palavra_anterior) * sizeof(char));
+            palavras[*qtd_palavas] = (String) malloc((i - pos_palavra_anterior+1) * sizeof(char));
 
             // copia palavra para o vetor de palavras separadas
             for (int j = 0, k = pos_palavra_anterior; j < (i - pos_palavra_anterior); j++, k++)
@@ -55,7 +55,7 @@ String *separa_por_espacos(String frase, int tamanho, int *qtd_palavas)
     }
 
     // ultima palavra
-    palavras[*qtd_palavas] = (String) malloc((tamanho-pos_palavra_anterior) * sizeof(char));
+    palavras[*qtd_palavas] = (String) malloc((tamanho-pos_palavra_anterior+1) * sizeof(char));
 
     for (int j = 0, k = pos_palavra_anterior; j < (tamanho-pos_palavra_anterior); j++, k++)
         palavras[*qtd_palavas][j] = frase[k];

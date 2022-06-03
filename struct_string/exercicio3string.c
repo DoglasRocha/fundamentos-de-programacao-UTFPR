@@ -25,6 +25,15 @@ int main(void)
     }
 
     intercala_frases(palavras, qtd_palavras);
+    for (int i = 0; i < 2; i++)
+    {
+        free(frases[i]);
+        for (int j = 0; j < qtd_palavras[i]; j++)
+            free(palavras[i][j]);
+
+        free(palavras[i]);
+    }
+
     return 0;
 }
 
@@ -43,4 +52,6 @@ void intercala_frases(String **palavras_separadas, int qtd_palavras[])
         printf("%s ", frase_resultante[i]);
 
     printf("\n");
+
+    free(frase_resultante);
 }

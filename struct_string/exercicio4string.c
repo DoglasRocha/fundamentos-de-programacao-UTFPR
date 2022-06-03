@@ -21,6 +21,9 @@ int main(void)
 
     printf("Senha criada: %s\n", senha);
 
+    free(nome);
+    free(bairro);
+    free(senha);
     return 0;
 }
 

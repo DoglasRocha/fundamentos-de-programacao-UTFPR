@@ -31,7 +31,7 @@ int busca_ocorrencias(String palavra, int tam_palavra, String frase, int tam_fra
 {
     int ocorrencias = 0, ocorreu;
 
-    for (int i = 0; i < tam_frase; i++){
+    for (int i = 0; i <= (tam_frase - tam_palavra); i++){
         ocorreu = 0;
 
         if (frase[i] == palavra[0])
@@ -39,13 +39,12 @@ int busca_ocorrencias(String palavra, int tam_palavra, String frase, int tam_fra
             ocorreu = 1;
 
             for (int j = 1; j < tam_palavra; j++)
-            {
                 if (frase[i + j] != palavra[j])
                 {
                     ocorreu = 0;
                     break;
                 }
-            }
+            
         }
         if (ocorreu) 
             ocorrencias++;

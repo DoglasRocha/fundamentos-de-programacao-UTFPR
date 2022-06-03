@@ -36,6 +36,7 @@ int main(void)
 
     imprime_abaixo_media(eletros, tam, media);
 
+    free(eletros);
     return 0;
 }
 
