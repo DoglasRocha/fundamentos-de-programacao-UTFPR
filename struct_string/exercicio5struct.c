@@ -37,7 +37,6 @@ void imprime_funcionarios(Funcionario* funcionarios_vet, int qtd_funcionarios);
 int Indice_funcionario(Funcionario* vet, int n, int mat);
 Funcionario** transforma_vet_pont(Funcionario vet_func[], int qtd_func);
 Funcionario* determinaSubordinado(Funcionario** vet, int n, int mat, int *pTam);
-void libera_funcionarios(Funcionario *vet_func, int tam);
 
 int main(void)
 {
@@ -68,7 +67,7 @@ int main(void)
     printf("Subordinados de %d:\n", sup_procurado);
     imprime_funcionarios(subordinados, qtd_subord);
 
-    libera_funcionarios(funcionarios, qtd_func);
+    free(funcionarios);
     free(funcionarios_pont);
     free(subordinados);
 }
@@ -100,16 +99,6 @@ int Indice_funcionario(Funcionario* vet, int n, int mat)
             return i;
 
     return -1;
-}
-
-void libera_funcionarios(Funcionario *vet_func, int tam)
-{
-    /* for (int i = 0; i < tam; i++)
-    {
-
-    } */
-
-    free(vet_func);
 }
 
 Funcionario** transforma_vet_pont(Funcionario vet_func[], int qtd_func)
