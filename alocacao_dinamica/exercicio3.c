@@ -45,7 +45,6 @@ int remove_valores_duplicados(int vetor_original[], int **v_destino, int tam)
     int *v_aux = (int *) malloc(sizeof(int));
     v_aux[0] = vetor_original[0];
 
-
     for (int i = 0; i < tam; i++)
     {
         for (int j = 0; j < tam_v_destino; j++)
