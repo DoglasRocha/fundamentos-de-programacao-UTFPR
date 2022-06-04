@@ -6,13 +6,14 @@ armazenados como int (defina para eles valores que caibam num inteiro). */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "meu_header.h"
 
 #define PRECO_MAX 1000
 
 typedef struct
 {
     float preco;
-    int telefone;
+    String telefone;
     int codigo;
 } Eletrodomestico;
 
@@ -36,6 +37,9 @@ int main(void)
 
     imprime_abaixo_media(eletros, tam, media);
 
+    for (int i = 0; i < tam; i++)
+        free(eletros[i].telefone);
+
     free(eletros);
     return 0;
 }
@@ -44,13 +48,10 @@ void preenche_vetor_eletrodomest(Eletrodomestico *eletro_arr, int tam)
 {
     for (int i = 0; i < tam; i++)
     {
-        Eletrodomestico eletro;
-
-        eletro.preco = (rand() / (float) RAND_MAX) * PRECO_MAX;
-        eletro.codigo = rand() % 1000000;
-        eletro.telefone = rand() % 100000000;
-
-        eletro_arr[i] = eletro;
+        eletro_arr[i].preco = (rand() / (float) RAND_MAX) * PRECO_MAX;
+        eletro_arr[i].codigo = rand() % 1000000;
+        eletro_arr[i].telefone = (String) malloc(14 * sizeof(char));
+        sprintf(eletro_arr[i].telefone, "(41)%05d-%04d", rand() % 100000, rand() % 10000);
     }
 }
 
@@ -70,5 +71,5 @@ void imprime_abaixo_media(Eletrodomestico *eletro_arr, int tam, float media)
 
     for (int i = 0; i < tam; i++)
         if (eletro_arr[i].preco < media)
-            printf("\tTelefone: %08d, preco: R$%.2f\n", eletro_arr[i].telefone, eletro_arr[i].preco);
+            printf("\tTelefone: %s, preco: R$%.2f\n", eletro_arr[i].telefone, eletro_arr[i].preco);
 }
