@@ -9,7 +9,7 @@ String le_string(int *tam_str_ptr, String mensagem)
     char c;
 
     printf("%s ", mensagem);
-    scanf("%c", &c);
+    scanf(" %c", &c);
 
     for (tam = 0; c != '\n'; tam++)
     {
