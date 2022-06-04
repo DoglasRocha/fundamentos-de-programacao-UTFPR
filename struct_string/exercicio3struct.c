@@ -44,13 +44,9 @@ void preenche_vetor_eletrodomest(Eletrodomestico *eletro_arr, int tam)
 {
     for (int i = 0; i < tam; i++)
     {
-        Eletrodomestico eletro;
-
-        eletro.preco = (rand() / (float) RAND_MAX) * PRECO_MAX;
-        eletro.codigo = rand() % 1000000;
-        eletro.telefone = rand() % 100000000;
-
-        eletro_arr[i] = eletro;
+        eletro_arr[i].preco = (rand() / (float) RAND_MAX) * PRECO_MAX;
+        eletro_arr[i].codigo = rand() % 1000000;
+        eletro_arr[i].telefone = rand() % 100000000;
     }
 }
 

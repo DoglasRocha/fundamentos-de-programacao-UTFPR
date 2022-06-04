@@ -37,16 +37,10 @@ int main(void)
 
 void le_pessoas(Pessoa *pessoas_arr, int qtd_pessoas)
 {
-    char inicial;
-    int dia, mes;
-
     for (int i = 0; i < qtd_pessoas; i++)
     {
-        Pessoa pessoa;
         printf("Qual a inicial do seu nome e seu dia de nasc (inicial dd mm)? ");
-        scanf(" %c %d %d", &pessoa.nome, &pessoa.dia, &pessoa.mes);
-
-        pessoas_arr[i] = pessoa;
+        scanf(" %c %d %d", &pessoas_arr[i].nome, &pessoas_arr[i].dia, &pessoas_arr[i].mes);
     }
 }
 
